@@ -1,0 +1,10 @@
+<div class="card-container">
+    <div class="card-left">
+        <span class="titulo">{{titulo}}</span>
+        <span class="cantidad">{{cantidad}}</span>
+        <p><span [ngClass]="{'aumento': indicador==='aumento', 'incremento': indicador==='incremento'}" >{{porcentaje}}</span>  vs el mes pasado</p>
+    </div>
+    <div class="card-right">
+        <i class="material-icons">group</i>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+.card-container{
+    width: 320px;
+    border:1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: var(--text-color);
+    font-weight:600;
+    font-size: 0.9rem;
+}
+
+.card-left{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-right{
+    background-color: var(--details);
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+
+.cantidad{
+    font-size: 1.3rem; 
+}
+
+p{
+    margin: 0;
+}
+
+.aumento{
+    color: green;
+}
+.incremento{
+    color: red;
+}

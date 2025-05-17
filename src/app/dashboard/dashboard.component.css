@@ -1,0 +1,112 @@
+.section-dashboard{
+    width: 100%;
+}
+
+.cards-container{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.user-table-container {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  margin: auto;
+}
+
+.user-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  
+}
+
+.user-count {
+  font-size: 0.875rem;
+  color: #888;
+  margin-left: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.filter-button, .date-filter {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-cell img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge.active {
+  background: #e6f4ea;
+  color: #2e7d32;
+}
+
+.badge.warned {
+  background: #fff8e1;
+  color: #f9a825;
+}
+
+.badge.blocked {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagination button {
+  padding: 0.3rem 0.6rem;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: #1976d2;
+  color: white;
+}

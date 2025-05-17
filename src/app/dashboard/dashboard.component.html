@@ -1,0 +1,37 @@
+<section class="section-dashboard">
+    <h1>Gestión de usuarios</h1>
+    <div class="cards-container">
+        <app-cards-info [titulo]="'Total de usuarios'" [cantidad]="1240" [porcentaje]="'+40%'" [indicador]="'aumento'">
+        </app-cards-info>
+        <app-cards-info [titulo]="'Usuarios nuevos'" [cantidad]="185" [porcentaje]="'+10%'" [indicador]="'aumento'">
+        </app-cards-info>
+        <app-cards-info [titulo]="'Usuarios activos'" [cantidad]="650" [porcentaje]="'-5%'" [indicador]="'incremento'">
+        </app-cards-info>
+    </div>
+    <div class="user-table-container">
+        <div class="user-table-header">
+            <h2>Lista de usuarios <span class="user-count">1240 usuarios</span></h2>
+            <div class="actions">
+                <input type="text" placeholder="Search for user" class="search-input" />
+                <button class="filter-button">Filtres</button>
+                <select class="date-filter">
+                    <option>Last 30 days</option>
+                </select>
+            </div>
+        </div>
+        <table class="user-table">
+            <thead></thead>
+            <tbody>
+                <app-user-list></app-user-list>
+            </tbody>
+        </table>
+        <div class="pagination">
+            <button disabled>‹</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <span>...</span>
+            <button>10</button>
+            <button>›</button>
+        </div>
+    </div>
+</section>
