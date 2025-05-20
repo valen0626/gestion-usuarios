@@ -1,37 +1,101 @@
-<section class="section-dashboard">
-    <h1>Gestión de usuarios</h1>
+<div class="container">
+  <app-nav></app-nav>
+  <section class="section-dashboard">
+    <div class="section-header">
+      <h1>Gestión de usuarios</h1>
+      <div class="my-user">
+        <i class="material-icons">account_circle</i>
+        <span>{{ correo }}</span>
+      </div>
+    </div>
     <div class="cards-container">
-        <app-cards-info [titulo]="'Total de usuarios'" [cantidad]="1240" [porcentaje]="'+40%'" [indicador]="'aumento'">
-        </app-cards-info>
-        <app-cards-info [titulo]="'Usuarios nuevos'" [cantidad]="185" [porcentaje]="'+10%'" [indicador]="'aumento'">
-        </app-cards-info>
-        <app-cards-info [titulo]="'Usuarios activos'" [cantidad]="650" [porcentaje]="'-5%'" [indicador]="'incremento'">
-        </app-cards-info>
+      <app-cards-info
+        [titulo]="'Total de usuarios'"
+        [cantidad]="cantidadUsuarios"
+        [porcentaje]="'+40%'"
+        [indicador]="'aumento'"
+      >
+      </app-cards-info>
+      <app-cards-info
+        [titulo]="'Usuarios nuevos'"
+        [cantidad]="185"
+        [porcentaje]="'+10%'"
+        [indicador]="'aumento'"
+      >
+      </app-cards-info>
+      <app-cards-info
+        [titulo]="'Usuarios activos'"
+        [cantidad]="650"
+        [porcentaje]="'-5%'"
+        [indicador]="'incremento'"
+      >
+      </app-cards-info>
     </div>
     <div class="user-table-container">
-        <div class="user-table-header">
-            <h2>Lista de usuarios <span class="user-count">1240 usuarios</span></h2>
-            <div class="actions">
-                <input type="text" placeholder="Search for user" class="search-input" />
-                <button class="filter-button">Filtres</button>
-                <select class="date-filter">
-                    <option>Last 30 days</option>
+      <div class="user-table-header">
+        <h2>
+          Lista de usuarios
+          <span class="user-count">{{ cantidadUsuarios }} usuarios</span>
+        </h2>
+        <div class="actions">
+          <div class="search-input">
+            <i class="material-icons">search</i>
+            <input type="text" placeholder="Buscar usuario" />
+          </div>
+          <div class="dropdown">
+            <button
+              class="filter-button"
+              (click)="mostrarFiltros = !mostrarFiltros"
+            >
+              <i class="material-icons">filter_list</i>
+              Filtros
+            </button>
+            <div class="dropdown-content" *ngIf="mostrarFiltros">
+              <label
+                >Ciudad:
+                <select [(ngModel)]="filtroCiudad" (change)="aplicarFiltros()">
+                  <option value="">Todas</option>
+                  <option value="Medellín">Medellín</option>
+                  <option value="Bogotá">Bogotá</option>
+                  <option value="Cali">Cali</option>
                 </select>
+              </label>
+
+              <label
+                >Estado:
+                <select [(ngModel)]="filtroEstado" (change)="aplicarFiltros()">
+                  <option value="">Todos</option>
+                  <option value="Activo">Activo</option>
+                  <option value="Inactivo">Inactivo</option>
+                </select>
+              </label>
             </div>
+          </div>
+
+          <button [routerLink]="['/usuarios/nuevo']" class="add-user">
+            <i class="material-icons">add</i>
+            Añadir usuario
+          </button>
         </div>
-        <table class="user-table">
-            <thead></thead>
-            <tbody>
-                <app-user-list></app-user-list>
-            </tbody>
-        </table>
-        <div class="pagination">
-            <button disabled>‹</button>
-            <button class="active">1</button>
-            <button>2</button>
-            <span>...</span>
-            <button>10</button>
-            <button>›</button>
-        </div>
+      </div>
+      <app-user-list
+        [usuarios]="usuariosPaginados"
+        (eliminarUsuario)="eliminar($event)"
+      ></app-user-list>
+      <div class="pagination">
+        <button (click)="paginaAnterior()" [disabled]="paginaActual === 1">
+          <i class="material-icons">chevron_left</i>
+        </button>
+        <button class="active">
+          <span>Página {{ paginaActual }} de {{ totalPaginas() }}</span>
+        </button>
+        <button
+          (click)="siguientePagina()"
+          [disabled]="paginaActual * elementosPorPagina >= usuarios.length"
+        >
+          <i class="material-icons">chevron_right</i>
+        </button>
+      </div>
     </div>
-</section>
+  </section>
+</div>

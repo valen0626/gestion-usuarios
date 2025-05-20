@@ -1,0 +1,31 @@
+<section>
+    <h2>{{ modoEdicion ? 'Editar usuario' : 'Crea un nuevo usuario' }}</h2>
+    <form [formGroup]="newUserForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="nombre" formControlName="nombre" id="nombre" required
+                placeholder="Ingrese el nombre del usuario" />
+        </div>
+        <div>
+            <label for="email">Correo electrónico</label>
+            <input type="email" formControlName="email" id="email" required
+                placeholder="Ingrese el correo del usuario" />
+        </div>
+        <div>
+            <label for="ciudad">Ciudad</label>
+            <input type="ciudad" formControlName="ciudad" id="ciudad" required
+                placeholder="Ingrese la ciudad del usuario" />
+        </div>
+        <div>
+            <label for="stado">Estado</label>
+            <select formControlName="estado">
+                <option value="Activo">Activo</option>
+                <option value="Inactivo">Inactivo</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" [disabled]="!newUserForm.valid">Guardar</button>
+            <button [routerLink]="['/dashboard']" class="btn-volver">Volver</button>
+        </div>
+    </form>
+</section>
