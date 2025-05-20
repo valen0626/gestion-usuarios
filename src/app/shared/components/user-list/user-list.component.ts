@@ -1,28 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-user-list',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.css'
 })
-export class UserListComponent implements OnInit{
-  usuarios: any[] = []
+export class UserListComponent {
+  @Input() usuarios: any[] = [];
+  @Output() eliminarUsuario = new EventEmitter<number>();
 
-  constructor(private userService: UserService){}
+  mostrarFiltros: boolean = false;
 
-  ngOnInit(): void {
-      this.userService.getUsuarios().subscribe({
-      next: (data) => {
-        console.log(data)
-        this.usuarios = data
-      },
-      error: (err)=>{
-        console.error('Error al cargar usuarios', err)
-      }
-    })
-    
+  constructor() {
+    console.log(this.usuarios)
   }
+
+  eliminar(id: number) {
+    this.eliminarUsuario.emit(id);
+  }
+
 }

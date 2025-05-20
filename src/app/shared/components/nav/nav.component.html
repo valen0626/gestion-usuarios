@@ -1,0 +1,20 @@
+<nav>
+    <ul>
+        <li [routerLink]="['/dashboard']">
+            <i class="material-icons">group</i>
+            <span>Usuarios</span>
+        </li>
+        <li>
+            <i class="material-icons">account_circle</i>
+            <span>Perfil</span>
+        </li>
+        <li>
+            <i class="material-icons">settings</i>
+            <span>Configuración</span>
+        </li>
+        <li (click)="cerrarSesion()">
+            <i class="material-icons">logout</i>
+            <span>Cerrar sesión</span>
+        </li>
+    </ul>
+</nav>

@@ -1,6 +1,46 @@
-th,
-td {
+.user-table th, 
+.user-table td {
   padding: 0.75rem;
   text-align: left;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--icons-color);
+}
+
+.user-table td i{
+  cursor: pointer;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+i{
+  color: var(--icons-color);
+}
+
+.estado {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-block;
+  text-align: center;
+  min-width: 80px;
+}
+
+.estado-activo {
+  background-color: #d1f7c4;
+  color: #27632a;
+}
+
+.estado-inactivo {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.user-table .usuario{
+  font-weight: 600;
+  color: black;
 }
