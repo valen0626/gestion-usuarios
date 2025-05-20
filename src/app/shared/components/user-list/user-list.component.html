@@ -1,7 +1,33 @@
-<tr *ngFor="let item of usuarios">
-    <td><input type="checkbox" /></td>
-    <td>{{item.nombre}}</td>
-    <td>{{item.email}}</td>
-    <td>{{item.rol}}</td>
-    <td>{{item.estado}}</td>
-</tr>
+<table class="user-table">
+    <thead>
+        <tr>
+            <th><input type="checkbox" /></th>
+            <th>Usuario</th>
+            <th>Correo</th>
+            <th>Ciudad</th>
+            <th>Fecha de creación</th>
+            <th>Estado</th>
+            <th>Eliminar</th>
+            <th>Editar</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let item of usuarios">
+            <td><input type="checkbox" /></td>
+            <td class="usuario">{{item.nombre}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.ciudad}}</td>
+            <td>{{item.creacion}}</td>
+            <td><span [ngClass]="{
+    'estado': true,
+    'estado-activo': item.estado === 'Activo',
+    'estado-inactivo': item.estado === 'Inactivo'
+  }">{{item.estado}}</span></td>
+            <td (click)="eliminar(item.id)"><i class="material-icons">delete</i></td>
+            <td><i class="material-icons" [routerLink]="['/usuarios/editar', item.id]">edit_square</i></td>
+        </tr>
+        <tr *ngIf="usuarios.length === 0">
+            <td colspan="5">No se encontraron resultados.</td>
+        </tr>
+    </tbody>
+</table>
