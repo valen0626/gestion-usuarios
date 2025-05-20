@@ -1,16 +1,106 @@
 [
   {
-    "id": 1,
-    "nombre": "Valentina",
-    "email": "valentina@example.com",
-    "rol": "Admin",
+    "id":1,
+    "nombre": "Valentina Ríos",
+    "email": "valentina.rios@example.com",
+    "ciudad": "Medellín",
+    "creacion": "2023-09-01",
     "estado": "Activo"
   },
   {
-    "id": 2,
-    "nombre": "Mateo",
-    "email": "mateo@example.com",
-    "rol": "Usuario",
+    "id":2,
+    "nombre": "Mateo Gómez",
+    "email": "mateo.gomez@example.com",
+    "ciudad": "Bogotá",
+    "creacion": "2023-08-15",
+    "estado": "Inactivo"
+  },
+  {
+    "id":3,
+    "nombre": "Camila Torres",
+    "email": "camila.torres@example.com",
+    "ciudad": "Cali",
+    "creacion": "2023-10-10",
+    "estado": "Activo"
+  },
+  {
+    "id":4,
+    "nombre": "Juan Pérez",
+    "email": "juan.perez@example.com",
+    "ciudad": "Barranquilla",
+    "creacion": "2023-07-20",
+    "estado": "Activo"
+  },
+  {
+    "id":5,
+    "nombre": "Laura Martínez",
+    "email": "laura.martinez@example.com",
+    "ciudad": "Bucaramanga",
+    "creacion": "2023-06-05",
+    "estado": "Activo"
+  },
+  {
+    "id":6,
+    "nombre": "Valentina Ríos",
+    "email": "valentina.rios@example.com",
+    "ciudad": "Medellín",
+    "creacion": "2023-07-15",
+    "estado": "Activo"
+  },
+  {
+    "id":7,
+    "nombre": "Carlos Pérez",
+    "email": "carlos.perez@example.com",
+    "ciudad": "Bogotá",
+    "creacion": "2022-12-10",
+    "estado": "Inactivo"
+  },
+  {
+    "id":8,
+    "nombre": "Luisa Fernández",
+    "email": "luisa.fernandez@example.com",
+    "ciudad": "Cali",
+    "creacion": "2024-01-22",
+    "estado": "Activo"
+  },
+  {
+    "id":9,
+    "nombre": "Andrés Gómez",
+    "email": "andres.gomez@example.com",
+    "ciudad": "Barranquilla",
+    "creacion": "2023-03-03",
+    "estado": "Activo"
+  },
+  {
+    "id":10,
+    "nombre": "Camila Torres",
+    "email": "camila.torres@example.com",
+    "ciudad": "Cartagena",
+    "creacion": "2024-04-18",
+    "estado": "Activo"
+  },
+  {
+    "id":11,
+    "nombre": "Juan Martínez",
+    "email": "juan.martinez@example.com",
+    "ciudad": "Manizales",
+    "creacion": "2023-09-30",
+    "estado": "Inactivo"
+  },
+  {
+    "id":12,
+    "nombre": "Natalia Vélez",
+    "email": "natalia.velez@example.com",
+    "ciudad": "Pereira",
+    "creacion": "2023-11-05",
+    "estado": "Activo"
+  },
+  {
+    "id":13,
+    "nombre": "David Romero",
+    "email": "david.romero@example.com",
+    "ciudad": "Bucaramanga",
+    "creacion": "2024-02-14",
     "estado": "Inactivo"
   }
 ]

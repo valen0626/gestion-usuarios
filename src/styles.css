@@ -1,18 +1,21 @@
 :root{
-    --border-color: #E0E0E0;
+    --border-color: #ddd;
     --text-color: #333333;
     --details: #f2f2f2;
-    --icons-color: #828289
+    --icons-color: #828289;
+    --blue: #1976d2;
+}
+
+html{
+ box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body{
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    box-sizing: border-box;
     background: #fafafa;
-}
-
-.container{
-    display: grid;
-    grid-template-columns: auto auto;
 }
