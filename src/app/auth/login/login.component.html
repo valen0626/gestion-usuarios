@@ -1,8 +1,8 @@
 <section>
-    <h1>Inicio de sesión</h1>
+    <h2>Inicia sesión</h2>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div>
-            <label for="email">Correo</label>
+            <label for="email">Correo electrónico</label>
             <input type="email" formControlName="email" id="email" />
         </div>
         <div>
@@ -10,7 +10,7 @@
             <input type="password" formControlName="password" id="password" />
         </div>
         <div>
-            <button type="submit" [disabled]="!loginForm.valid">Ingresar</button>
+            <button type="submit" [disabled]="!loginForm.valid">Iniciar sesión</button>
         </div>
     </form>
 </section>

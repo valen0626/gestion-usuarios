@@ -24,6 +24,7 @@ export class LoginComponent {
     const {email, password} = this.loginForm.value
     if (email === "camargovalen06@gmail.com" && password === '1234') {
       localStorage.setItem('auth', 'true')
+      localStorage.setItem('correo', email)
       this.router.navigate(['/dashboard'])
       console.log('entra')
     }else{
