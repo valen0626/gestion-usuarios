@@ -1,59 +1,38 @@
-# DashboardUsuarios
+# Prueba Técnica - Gestión de Usuarios
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
+## Instrucciones de ejecución
 
-## Development server
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/valen0626/gestion-usuarios.git
+   cd dashboard-usuarios
 
-To start a local development server, run:
+2. Instalar dependencias:
+npm install
 
-```bash
+3. Ejecutar la aplicación:
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. Abrir en el navegador:
+http://localhost:4200
 
-## Code scaffolding
+## Instrucciones para pruebas
+### Ejecutar pruebas unitarias:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
 ng test
-```
 
-## Running end-to-end tests
+## Credenciales de acceso
+correo: camargovalen06@gmail.com
+contraseña: 1234
 
-For end-to-end (e2e) testing, run:
+## Sustento del diseño de la solución
+Angular con componentes standalone para modularidad.
+UserService maneja usuarios mediante observables para sincronización reactiva.
+Paginación y filtros para mejorar usabilidad y rendimiento.
+Separación de responsabilidades y comunicación entre componentes vía @Input y @Output.
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Arquitectura utilizada
+Arquitectura basada en componentes standalone de Angular.
+Patrón reactivo con RxJS.
+Servicio centralizado para manejo de usuarios.
+Esta arquitectura facilita escalabilidad, reutilización y mantenimiento.
